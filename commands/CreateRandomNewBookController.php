@@ -14,6 +14,7 @@ use app\useCases\books\CreateBookService;
 use DateTime;
 use yii\console\Controller;
 use yii\console\ExitCode;
+use yii\helpers\BaseConsole;
 
 class CreateRandomNewBookController extends Controller
 {
@@ -31,9 +32,10 @@ class CreateRandomNewBookController extends Controller
 
     public function actionIndex(): int
     {
+        $phone = BaseConsole::input("Введите ваш телефон: ");
         try {
             $author = $this->createAuthor();
-            $this->subscribeUserForAuthorService->subscribeByPhone($author, '+71234459878');
+            $this->subscribeUserForAuthorService->subscribeByPhone($author, $phone);
             $this->createBook($author);
         } catch (FailedCreateAuthorException|FailedCreateBookException|FailedCreateSubscriberException $e) {
             $this->stdout($e->getMessage());
