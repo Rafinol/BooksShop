@@ -25,8 +25,7 @@ class CreateRandomNewBookController extends Controller
         private readonly CreateBookService $createBookService,
         private readonly SubscribeUserForAuthorService $subscribeUserForAuthorService,
         $config = []
-    )
-    {
+    ) {
         parent::__construct($id, $module, $config);
     }
 

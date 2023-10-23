@@ -13,8 +13,7 @@ class BooksController extends Controller
         $module,
         private readonly BookRepository $bookRepository,
         $config = []
-    )
-    {
+    ) {
         parent::__construct($id, $module, $config);
     }
 

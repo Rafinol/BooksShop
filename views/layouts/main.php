@@ -36,8 +36,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         'brandUrl' => Yii::$app->homeUrl,
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
     ]);
-    NavBar::end();
-    ?>
+NavBar::end();
+?>
 </header>
 
 <main id="main" class="flex-shrink-0" role="main">

@@ -16,7 +16,7 @@ readonly class SmsPilot implements SmsSender
         if (is_array($to)) {
             $to = implode(',', $to);
         }
-        
+
         $ch = curl_init($this->url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
